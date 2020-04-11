@@ -14,7 +14,7 @@
   {% for my_sub_list in my_list %} 
     {% if my_sub_list == 1 %}
         <li>{{forloop.counter}} - {{my_sub_list|add:1 }}</li>
-    {% if my_sub_list == 2 %}
+    {% elif my_sub_list == 2 %}
         <li>{{forloop.counter}} - {{my_sub_list|add:2}}</li>
     {% else %}
         <li>{{forloop.counter}} - {{my_sub_list}}</li>
