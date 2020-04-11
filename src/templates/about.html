@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<h1>About Page</h1>
+<p>this is a template</p>
+<p>
+  {{ my_text }} ,{{my_number}},{{my_list}}
+</p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ul>
+  {% for my_sub_list in my_list %} 
+    {% if my_sub_list == 1 %}
+        <li>{{forloop.counter}} - {{my_sub_list|add:1 }}</li>
+    {% if my_sub_list == 2 %}
+        <li>{{forloop.counter}} - {{my_sub_list|add:2}}</li>
+    {% else %}
+        <li>{{forloop.counter}} - {{my_sub_list}}</li>
+    {% endif %} 
+  {% endfor %}
+</ul>
+
+{% endblock %}
